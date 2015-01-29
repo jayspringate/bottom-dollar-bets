@@ -69,6 +69,21 @@ $(function () {
 totalGradeCount();
 console.log("Over:" + " " + overCount + " " + "Under:" + " " + underCount + " " + "Push:" + " " + pushCount);
 
+   var tableBuild = function () {
+      var   $tableHead;
+      if ($('.selected').val() != "blank") {
+        $tableHead = $('.selected').val();
+        $('#tableInfo').text($tableHead);
+        $('#winCount').text("Win Count:" + " " + winCount);
+        $('#lossCount').text("Loss Count:" + " " + lossCount);
+        $('#overCount').text("Over Count:" + " " + overCount);
+        $('#underCount').text("Under Count" + " " + underCount);
+        $('#pushCount').text("Push Count:" + " " + pushCount);
+      }
+
+    };
+    tableBuild();
+
 });
 	});
 								
