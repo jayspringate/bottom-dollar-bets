@@ -1,0 +1,36 @@
+body {
+	background-image:url(http://allthingssports.com/wp-content/uploads/2012/11/NBA-Page-Background1.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0;
+
+}
+.header {
+	font-family: 'Yesteryear';
+	font-size: 75px;
+	text-align: center;
+	padding:15px 0;
+	width: 430px;
+	margin: auto;
+	border:#87adde;
+	border-style:ridge;
+}
+nav {
+	display:-webkit-inline-box;
+	display:-moz-inline-box;
+}
+.navBar {
+	padding:25px 0;
+}
+.homeTeam {
+	padding: 0 10px 0 310px;
+}
+.dropDown {
+	padding: 0 10px;
+}
+button {
+	display: list-item;
+	margin:auto;
+}
