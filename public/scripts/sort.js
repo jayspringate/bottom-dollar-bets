@@ -1,18 +1,21 @@
 $(function () {
 		
 	$('#testClick').on('click', function () {
-		var property = [];
-		var selection = [];
+		var property 										= [];
+		var selection 									= [];
 		var element;
-		var filteredGames = gameData;
-		var winCount = 0;
-		var lossCount = 0;
-		var pushCount = 0;
-		var overCount = 0;
-		var underCount = 0;
-		var pushTotalCount = 0;
+		var filteredGames 							= gameData;
+		var winCount 										= 0;
+		var lossCount 									= 0;
+		var pushCount 									= 0;
+		var overCount 									= 0;
+		var underCount 									= 0;
+		var pushTotalCount 							= 0;
+		var $homeTeam 									= $('.selected:eq(0) option:selected').val();
+		var $awayTeam 									= $('.selected:eq(0) option:selected').val();
 
 	$(".selected").removeClass("selected");
+	$('#teamLogo').removeClass($homeTeam);
 	
 	console.log($(".selected"));
 
@@ -71,8 +74,12 @@ console.log("Over:" + " " + overCount + " " + "Under:" + " " + underCount + " " 
 
    var tableBuild = function () {
    var  $tableHead;
-   
+
+   // var $homeTeam = $('.selected:eq(0) option:selected').val();
+   // var $awayTeam = $('.selected:eq(1) option:selected').val();
+    
     $tableHead = $('.selected option:selected').text();
+    $('#teamLogo').addClass($homeTeam);
     $('#tableInfo').text($tableHead);
     $('#record').text("Record: " + winCount + "-" + lossCount + "-" + pushCount);
     $('#winPercent').text(Math.round(100 * (winCount/(winCount + lossCount) * 10)) /10 + "%");
