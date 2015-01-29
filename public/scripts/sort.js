@@ -74,6 +74,7 @@ console.log("Over:" + " " + overCount + " " + "Under:" + " " + underCount + " " 
       if ($('.selected').val() != "blank") {
         $tableHead = $('.selected').val();
         $('#tableInfo').text($tableHead);
+        $('#tableInfo').addClass($tableHead);
         $('#record').text("Record: " + winCount + "-" + lossCount);
         $('#winPercent').text(Math.round(100 * (winCount/(winCount + lossCount) * 10)) /10 + "%");
         $('#overCount').text("Over Count:" + " " + overCount);
