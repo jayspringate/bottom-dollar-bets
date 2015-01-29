@@ -18,7 +18,6 @@
   <nav class="navBar">
     <form class="homeTeam">
       <select name="homeTeam" id="team">
-        <option value="blank" selected="selected">Select Team</option>
       <option value="blank" selected="selected">Select Team</option>
         <option value="ATL">Atlanta Hawks</option>
         <option value="BOS">Boston Celtics</option>
@@ -56,7 +55,6 @@
      <form class="roadTeam dropDown">
       <select name="roadTeam" value="blank" id="opponent">
         <option value="blank" selected="selected">Select Opponent</option>
-          <option value="blank" selected="selected">Select Team</option>
         <option value="ATL">Atlanta Hawks</option>
         <option value="BOS">Boston Celtics</option>
         <option value="BK">Brooklyn Nets</option>
@@ -137,10 +135,12 @@
   <table id="resultsTable">
    <th id='tableInfo'></th>
      <tr>
-       <td id='winCount'></td>
-       <td id='lossCount'></td>
+       <td id='record'></td>
+       <td id='winPercent'></td>
        <td id='overCount'></td>
        <td id='underCount'></td>
+       <td id='overPercent'></td>
+       <td id='underPercent'></td>
        <td id='pushCount'></td>
      </tr>
    
