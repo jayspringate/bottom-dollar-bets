@@ -35,6 +35,14 @@ button {
 	margin:auto;
 }
 
+#teamLogo {
+	height: 200px;
+	width: 200px;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
 .ATL {
 	background-image: url(../img/atl.gif);
 }
