@@ -110,6 +110,14 @@ button:hover {
 	width: 20%;
 }
 
+#gamesTable td {
+	font-size: 18px;
+	text-align: center;
+	font-weight: bold;
+	height: 20px;
+	width: 20%;
+}
+
 #teamLogo {
 	height: 110px;
 	width: 150px;
