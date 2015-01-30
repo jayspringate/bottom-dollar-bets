@@ -13,9 +13,10 @@ body {
 main {
   background-color: white;
   width: 60%;
-  height: 800px;
+  height: 100%;
   opacity: 0.85;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 /*nav {
 	display:-webkit-inline-box;

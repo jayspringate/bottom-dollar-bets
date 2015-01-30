@@ -131,7 +131,9 @@ button:hover {
   -webkit-animation-iteration-count: 1;
 }
 
-
+section {
+	margin-top: 20px;
+}
 
 .ATL {
 	background-image: url(../img/atl.gif);
