@@ -11,18 +11,9 @@ $(function () {
 		var overCount 				= 0;
 		var underCount 				= 0;
 		var pushTotalCount 		= 0;
-		var $homeTeam				 	= $('.selected:eq(0) option:selected').val();
-		var $awayTeam					= 0;
 
 	$(".selected").removeClass("selected");
 	$('#teamLogo').removeClass();
-
-	// if ($homeTeam === "blank" && $awayTeam != "blank" ||) {
-
-	// }
-
-	
-	console.log($(".selected"));
 
 	$("select").filter(function(index) {
 			return $($("select")[index]).val()!="blank";
@@ -33,10 +24,6 @@ $(function () {
 			selection[index] = $(this).val();
 		});
 
-		console.log($(".selected"));
-
-		console.log(property, selection);
-
 		for (i=0; i < property.length; i++) {
 	function gameFilter(element) {
 			if (element[property[i]] == selection[i]) {
@@ -45,7 +32,6 @@ $(function () {
 }
 	filteredGames = filteredGames.filter(gameFilter);
 }
-	console.log(filteredGames);
 
 	function gradeCount() {
 		for (i=0; i < filteredGames.length; i++) {
@@ -60,7 +46,6 @@ $(function () {
 		
 	};
 	gradeCount();
-	console.log(winCount + " - " + lossCount + " - " + pushCount);
 
 	function totalGradeCount() {
 		for (i=0; i < filteredGames.length; i++) {
@@ -75,7 +60,6 @@ $(function () {
 	};
 
 totalGradeCount();
-console.log("Over:" + " " + overCount + " " + "Under:" + " " + underCount + " " + "Push:" + " " + pushCount);
 
    var tableBuild = function () {
    var  $tableHead;
@@ -83,9 +67,6 @@ console.log("Over:" + " " + overCount + " " + "Under:" + " " + underCount + " " 
    var $homeTeam = $('.selected:eq(0) option:selected').val();
    var $awayTeam = $('.selected:eq(1) option:selected').val();
    var winPercent = Math.round(100 * (winCount/(winCount + lossCount) * 10)) /10;
-   // if (isNaN(winPercent)) {
-   // 	winPercent = "N/A";
-   // }
     
     $('#teamLogo').addClass($homeTeam);
     $tableHead = $('.selected option:selected').text();
