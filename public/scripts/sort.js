@@ -11,11 +11,16 @@ $(function () {
 		var overCount 									= 0;
 		var underCount 									= 0;
 		var pushTotalCount 							= 0;
-		var $homeTeam 									= $('.selected:eq(0) option:selected').val();
-		var $awayTeam 									= $('.selected:eq(0) option:selected').val();
+		var $homeTeam 									= 0;
+		var $awayTeam 									= 0;
 
 	$(".selected").removeClass("selected");
 	$('#teamLogo').removeClass($homeTeam);
+
+	// if ($homeTeam === "blank" && $awayTeam != "blank" ||) {
+
+	// }
+
 	
 	console.log($(".selected"));
 
@@ -75,11 +80,11 @@ console.log("Over:" + " " + overCount + " " + "Under:" + " " + underCount + " " 
    var tableBuild = function () {
    var  $tableHead;
 
-   // var $homeTeam = $('.selected:eq(0) option:selected').val();
-   // var $awayTeam = $('.selected:eq(1) option:selected').val();
+   var $homeTeam = $('.selected:eq(0) option:selected').val();
+   var $awayTeam = $('.selected:eq(1) option:selected').val();
     
-    $tableHead = $('.selected option:selected').text();
     $('#teamLogo').addClass($homeTeam);
+    $tableHead = $('.selected option:selected').text();
     $('#tableInfo').text($tableHead);
     $('#record').text("Record: " + winCount + "-" + lossCount + "-" + pushCount);
     $('#winPercent').text(Math.round(100 * (winCount/(winCount + lossCount) * 10)) /10 + "%");
