@@ -4,6 +4,8 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: 100%;
+	background-width: 100%;
+	background-height: 100%;
 	margin: 0;
 
 }
@@ -25,7 +27,7 @@ nav {
 	padding:25px 0;
 }
 .homeTeam {
-	padding: 0 10px 0 310px;
+	padding: 10px;
 }
 .dropDown {
 	padding: 0 10px;
@@ -67,8 +69,8 @@ button {
 }
 
 #teamLogo {
-	height: 200px;
-	width: 200px;
+	height: 100px;
+	width: 100px;
 	background-repeat: no-repeat;
 	margin: 0 auto;
 	margin-top: 20px;

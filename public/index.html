@@ -13,11 +13,13 @@
   <script src="scripts/jquery.js"></script>
 </head>
 <body>
+  <main>
   <header class="header">
       Bottom Dollar Bets
   </header>
+  <h1>Trend Analyzer</h1>
   <nav class="navBar">
-    <form class="homeTeam">
+    <form class="homeTeam dropDown">
       <select name="homeTeam" id="team">
         <option value="blank" selected="selected">Select Team</option>
         <option value="ATL">Atlanta Hawks</option>
@@ -190,32 +192,37 @@
   <button id='testClick'>Get Results</button>
   <div id="teamLogo"></div>
 
-  <table id="resultsTable">
+  <table class="resultsTable" id='winLossTable'>
     <tr>
       <td>Record</td>
-      <td>Win Percentage</td>
-      <td>Over Count</td>
-      <td>Under Count</td>
-      <td>Over Percentage</td>
-      <td>Under Percentage</td>
-      <td>Push Count</td>
+      <td>Win %</td>
     </tr>
     <tr>
-       <td id='record'></td>
-       <td id='winPercent'></td>
+      <td id='record'></td>
+      <td id='winPercent'></td>
+    </tr>
+  </table>
+  <table class='resultsTable' id='overUnderTable'>
+    <tr>
+      <td>Over</td>
+      <td>Under</td>
+      <td>Over %</td>
+      <td>Under %</td>
+      <td>Push</td>
+    </tr>
+    <tr>
        <td id='overCount'></td>
        <td id='underCount'></td>
        <td id='overPercent'></td>
        <td id='underPercent'></td>
        <td id='pushCount'></td>
      </tr>
-   
- </table>
+    </table>
 
 <script src="scripts/gameData.js"></script>
 <script src="scripts/dataAdjust.js"></script>
 <script src="scripts/sort.js"></script>
 
-
+</main>
 </body>
     </html>
