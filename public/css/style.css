@@ -34,6 +34,37 @@ button {
 	display: list-item;
 	margin:auto;
 }
+#resultsTable {
+	font-size:12px;
+	color:black;
+	width:50%;
+	border-width: 1px;
+	border-color: #729ea5;
+	border-collapse: collapse;
+	margin:auto;
+}
+#resultsTable th {
+	font-size:12px;
+	background-color:#87adde;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #87adde;
+	text-align:left;
+}
+#resultsTable tr {
+	background-color:#afc8e9;
+}
+#resultsTable td {
+	font-size:12px;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #87adde;
+}
+#resultsTable tr:hover {
+	background-color:#deb887;
+}
 
 #teamLogo {
 	height: 200px;
