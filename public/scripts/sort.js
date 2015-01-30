@@ -61,22 +61,58 @@ $(function () {
 
 totalGradeCount();
 
-   var tableBuild = function () {
-   var  $tableHead;
+  var tableBuild = function () {
+    var $tableHead,
+        percentWin,
+        percentOver,
+        percentUnder; 
 
    var $homeTeam = $('.selected:eq(0) option:selected').val();
    var $awayTeam = $('.selected:eq(1) option:selected').val();
-   var winPercent = Math.round(100 * (winCount/(winCount + lossCount) * 10)) /10;
+   
+   var winPercentage = function () {
+    var numberCheck = Math.round(100 * (winCount/(winCount + lossCount) * 10)) /10;
+    if (isNaN(numberCheck)) {
+      percentWin = "N/A";
+    } else {
+      percentWin = numberCheck + "%";
+    }
+  };
+  
+  var overPercentage = function () {
+    var overCheck = Math.round(100 * (overCount/(overCount + underCount) * 10)) /10;
+    if (isNaN(overCheck)) {
+      percentOver = "N/A";
+    } else {
+      percentOver = overCheck + "%";
+    }
+  };
+
+  var underPercentage = function () {
+    var underCheck = Math.round(100 * (underCount/(underCount + overCount) * 10)) /10;
+    if (isNaN(underCheck)) {
+      percentUnder = "N/A";
+    } else {
+      percentUnder = underCheck + "%";
+    }
+  };
+
+  winPercentage();
+  overPercentage();
+  underPercentage();
     
-    $('#teamLogo').addClass($homeTeam);
+    $('#teamLogo').addClass($homeTeam).addClass('flipInX').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+        function() {
+          $(this).removeClass('flipInX');
+        });
     $tableHead = $('.selected option:selected').text();
     $('#tableInfo').text($tableHead);
     $('#record').text(winCount + "-" + lossCount + "-" + pushCount);
-    $('#winPercent').text(Math.round(100 * (winCount/(winCount + lossCount) * 10)) /10 + "%");
+    $('#winPercent').text(percentWin);
     $('#overCount').text(overCount);
     $('#underCount').text(underCount);
-    $("#overPercent").text(Math.round(100 * (overCount/(overCount + underCount) * 10)) /10 + "%");
-    $('#underPercent').text(Math.round(100 * (underCount/(underCount + overCount) * 10)) /10 + "%");
+    $("#overPercent").text(percentOver);
+    $('#underPercent').text(percentUnder);
     $('#pushCount').text(pushTotalCount);
  
 
