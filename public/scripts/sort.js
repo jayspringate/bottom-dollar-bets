@@ -82,6 +82,10 @@ console.log("Over:" + " " + overCount + " " + "Under:" + " " + underCount + " " 
 
    var $homeTeam = $('.selected:eq(0) option:selected').val();
    var $awayTeam = $('.selected:eq(1) option:selected').val();
+   var winPercent = Math.round(100 * (winCount/(winCount + lossCount) * 10)) /10;
+   // if (isNaN(winPercent)) {
+   // 	winPercent = "N/A";
+   // }
     
     $('#teamLogo').addClass($homeTeam);
     $tableHead = $('.selected option:selected').text();
