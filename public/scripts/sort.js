@@ -11,8 +11,6 @@ $(function () {
 		var overCount 									= 0;
 		var underCount 									= 0;
 		var pushTotalCount 							= 0;
-		var $homeTeam 									= 0;
-		var $awayTeam 									= 0;
 
 	$(".selected").removeClass("selected");
 	$('#teamLogo').removeClass($homeTeam);
