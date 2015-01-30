@@ -4,15 +4,16 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: 100%;
+	background-height: 100%;
 	margin: 0;
 
 }
 .header {
 	font-family: 'Yesteryear';
-	font-size: 75px;
+	font-size: 5em;
 	text-align: center;
 	padding:15px 0;
-	width: 430px;
+	width: 50%;
 	margin: auto;
 	border:#87adde;
 	border-style:ridge;

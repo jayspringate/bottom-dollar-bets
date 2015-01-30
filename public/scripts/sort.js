@@ -86,13 +86,13 @@ console.log("Over:" + " " + overCount + " " + "Under:" + " " + underCount + " " 
     $('#teamLogo').addClass($homeTeam);
     $tableHead = $('.selected option:selected').text();
     $('#tableInfo').text($tableHead);
-    $('#record').text("Record: " + winCount + "-" + lossCount + "-" + pushCount);
+    $('#record').text(winCount + "-" + lossCount + "-" + pushCount);
     $('#winPercent').text(Math.round(100 * (winCount/(winCount + lossCount) * 10)) /10 + "%");
-    $('#overCount').text("Over Count:" + " " + overCount);
-    $('#underCount').text("Under Count" + " " + underCount);
-    $("#overPercent").text("Over Percentage" + Math.round(100 * (overCount/(overCount + underCount) * 10)) /10 + "%");
-    $('#underPercent').text("Under Percentage" + Math.round(100 * (underCount/(underCount + overCount) * 10)) /10 + "%");
-    $('#pushCount').text("Push Count:" + " " + pushTotalCount);
+    $('#overCount').text(overCount);
+    $('#underCount').text(underCount);
+    $("#overPercent").text(Math.round(100 * (overCount/(overCount + underCount) * 10)) /10 + "%");
+    $('#underPercent').text(Math.round(100 * (underCount/(underCount + overCount) * 10)) /10 + "%");
+    $('#pushCount').text(pushTotalCount);
  
 
     };

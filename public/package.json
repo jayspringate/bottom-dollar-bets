@@ -1,24 +1,22 @@
 {
-  "name": "group-capstone-project",
+  "name": "bottom-dollar-bets",
   "version": "1.0.0",
-  "description": "nba data aggregator",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "description": "Problem domain: Gather a data set consisting of all NBA games played in the 2014-2015 season, and make it sortable by a list of parameters, giving the user the ability to analyze the performance of any given data subset against the spread or over/under.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jayspringate/group-capstone-project.git"
+    "url": "https://github.com/jayspringate/bottom-dollar-bets.git"
   },
-  "author": "Jay Springate",
+  "author": "Troy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jayspringate/group-capstone-project/issues"
+    "url": "https://github.com/jayspringate/bottom-dollar-bets/issues"
   },
-  "homepage": "https://github.com/jayspringate/group-capstone-project",
+  "homepage": "https://github.com/jayspringate/bottom-dollar-bets",
   "dependencies": {
     "express": "^4.11.1"
   }
