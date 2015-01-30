@@ -1,21 +1,21 @@
 $(function () {
 		
 	$('#testClick').on('click', function () {
-		var property 										= [];
-		var selection 									= [];
+		var property 					= [];
+		var selection 				= [];
 		var element;
-		var filteredGames 							= gameData;
-		var winCount 										= 0;
-		var lossCount 									= 0;
-		var pushCount 									= 0;
-		var overCount 									= 0;
-		var underCount 									= 0;
-		var pushTotalCount 							= 0;
-		var $homeTeam 									= 0;
-		var $awayTeam 									= 0;
+		var filteredGames 		= gameData;
+		var winCount 					= 0;
+		var lossCount 				= 0;
+		var pushCount 				= 0;
+		var overCount 				= 0;
+		var underCount 				= 0;
+		var pushTotalCount 		= 0;
+		var $homeTeam				 	= $('.selected:eq(0) option:selected').val();
+		var $awayTeam					= 0;
 
 	$(".selected").removeClass("selected");
-	$('#teamLogo').removeClass($homeTeam);
+	$('#teamLogo').removeClass();
 
 	// if ($homeTeam === "blank" && $awayTeam != "blank" ||) {
 
