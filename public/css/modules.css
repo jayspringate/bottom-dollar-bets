@@ -118,6 +118,9 @@ button:hover {
 	margin-top: 20px;
 	clear: both;
 	margin-top: 50px;
+	-webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
 }
 
 
