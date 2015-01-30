@@ -1,19 +1,21 @@
 $(function () {
 		
 	$('#testClick').on('click', function () {
-		var property 										= [];
-		var selection 									= [];
+		var property 					= [];
+		var selection 				= [];
 		var element;
-		var filteredGames 							= gameData;
-		var winCount 										= 0;
-		var lossCount 									= 0;
-		var pushCount 									= 0;
-		var overCount 									= 0;
-		var underCount 									= 0;
-		var pushTotalCount 							= 0;
+		var filteredGames 		= gameData;
+		var winCount 					= 0;
+		var lossCount 				= 0;
+		var pushCount 				= 0;
+		var overCount 				= 0;
+		var underCount 				= 0;
+		var pushTotalCount 		= 0;
+		var $homeTeam				 	= $('.selected:eq(0) option:selected').val();
+		var $awayTeam					= 0;
 
 	$(".selected").removeClass("selected");
-	$('#teamLogo').removeClass($homeTeam);
+	$('#teamLogo').removeClass();
 
 	// if ($homeTeam === "blank" && $awayTeam != "blank" ||) {
 
@@ -80,17 +82,21 @@ console.log("Over:" + " " + overCount + " " + "Under:" + " " + underCount + " " 
 
    var $homeTeam = $('.selected:eq(0) option:selected').val();
    var $awayTeam = $('.selected:eq(1) option:selected').val();
+   var winPercent = Math.round(100 * (winCount/(winCount + lossCount) * 10)) /10;
+   // if (isNaN(winPercent)) {
+   // 	winPercent = "N/A";
+   // }
     
     $('#teamLogo').addClass($homeTeam);
     $tableHead = $('.selected option:selected').text();
     $('#tableInfo').text($tableHead);
-    $('#record').text("Record: " + winCount + "-" + lossCount + "-" + pushCount);
+    $('#record').text(winCount + "-" + lossCount + "-" + pushCount);
     $('#winPercent').text(Math.round(100 * (winCount/(winCount + lossCount) * 10)) /10 + "%");
-    $('#overCount').text("Over Count:" + " " + overCount);
-    $('#underCount').text("Under Count" + " " + underCount);
-    $("#overPercent").text("Over Percentage" + Math.round(100 * (overCount/(overCount + underCount) * 10)) /10 + "%");
-    $('#underPercent').text("Under Percentage" + Math.round(100 * (underCount/(underCount + overCount) * 10)) /10 + "%");
-    $('#pushCount').text("Push Count:" + " " + pushTotalCount);
+    $('#overCount').text(overCount);
+    $('#underCount').text(underCount);
+    $("#overPercent").text(Math.round(100 * (overCount/(overCount + underCount) * 10)) /10 + "%");
+    $('#underPercent').text(Math.round(100 * (underCount/(underCount + overCount) * 10)) /10 + "%");
+    $('#pushCount').text(pushTotalCount);
  
 
     };
