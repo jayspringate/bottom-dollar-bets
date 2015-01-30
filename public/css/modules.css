@@ -14,15 +14,21 @@
  	font-size: 30px;
  	font-family: arial verdana;
  	margin-top: 20px;
- 	margin-left: 37%;
  	font-weight: bold;
  	text-decoration: underline;
  }
-/*.navBar {
-	padding:25px;
-	margin: auto;
-	margin-left: 5%;
-}*/
+.centered {
+	text-align: center;
+}
+nav h1 {
+	width:50%;
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+nav a {
+	display: inline-block;
+}
 /*.homeTeam {
 	padding: 0 10px 0 310px;
 }
@@ -79,7 +85,6 @@ font-size: 16px;
 button {
 	display: list-item;
 	float: left;
-	clear: both;
 	margin-left: 40%;
 	margin-top: 10px;
 	height: 50px;
