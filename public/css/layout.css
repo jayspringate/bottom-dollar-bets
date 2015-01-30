@@ -1,0 +1,13 @@
+body {
+	background-image:url(http://allthingssports.com/wp-content/uploads/2012/11/NBA-Page-Background1.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0;
+
+}
+nav {
+	display:-webkit-inline-box;
+	display:-moz-inline-box;
+}
