@@ -14,8 +14,15 @@ $(function () {
 
 //remove classes and empty elements to reset click 
     $(".selected").removeClass("selected");
-    $('#teamLogo').removeClass();
     $('.temp').empty();
+    if ($('#team').val() != 'blank') {
+      $('#teamLogo').removeClass();
+    } else {
+      $('#teamLogo').addClass('nba').addClass('flipInX').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+          function() {
+            $(this).removeClass('flipInX');
+          });
+    }
 
     $("select").filter(function(index) {
     		return $($("select")[index]).val()!="blank";
