@@ -116,6 +116,7 @@ button:hover {
 	font-weight: bold;
 	height: 20px;
 	width: 20%;
+	opacity: .85;
 }
 
 #teamLogo {
@@ -207,6 +208,9 @@ section {
 	background-image: url(../img/min.gif);
 }
 
+.nba {
+	background-image: url(../img/nba.gif);
+}
 .NO {
 	background-image: url(../img/no.gif);
 }
